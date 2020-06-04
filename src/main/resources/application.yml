@@ -1,0 +1,6 @@
+swagger:
+  api:
+    info:
+      title: "Customer Management"
+      description: ""
+      version: @version@
