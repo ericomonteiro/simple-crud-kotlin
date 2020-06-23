@@ -1,6 +1,18 @@
+spring:
+  application:
+    name: @project.artifactId@
+
 swagger:
   api:
     info:
       title: "Customer Management"
       description: ""
       version: @version@
+
+opentracing:
+  jaeger:
+    udp-sender:
+      host:
+        localhost
+      port:
+        5775

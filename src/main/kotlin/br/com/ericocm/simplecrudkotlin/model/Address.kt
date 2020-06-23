@@ -18,4 +18,14 @@ class Address (
             "",
             ""
     )
+
+    fun print() {
+        println("addressLine1: ${this.addressLine1}")
+        println("addressLine2: ${this.addressLine2}")
+        println("neighborhood: ${this.neighborhood}")
+        println("city: ${this.city}")
+        println("stateProvince: ${this.stateProvince}")
+        println("postalCode: ${this.postalCode}")
+        println("country: ${this.country}")
+    }
 }
