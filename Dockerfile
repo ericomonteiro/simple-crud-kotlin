@@ -8,4 +8,4 @@ COPY ${APP_TARGET}/${APP} /opt
 
 EXPOSE 8080
 
-CMD java -Xms${JAVA_XMS:-512m} -Xmx${JAVA_XMX:-1024m} -jar /opt/${APP}
+CMD java -Xms${JAVA_XMS:-512m} -Xmx${JAVA_XMX:-1024m} -jar /opt/${APP} --spring.profiles.active=docker
