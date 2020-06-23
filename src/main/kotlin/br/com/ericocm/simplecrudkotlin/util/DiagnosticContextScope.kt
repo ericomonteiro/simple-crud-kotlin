@@ -1,17 +1,17 @@
-package itau.iti.starter.tracing.util
+package br.com.ericocm.simplecrudkotlin.util
 
 import io.opentracing.Scope
 import io.opentracing.Span
 import io.opentracing.SpanContext
-import itau.iti.starter.tracing.util.DiagnosticContextScopeManager.Companion.CORRELATION_ID
-import itau.iti.starter.tracing.util.DiagnosticContextScopeManager.Companion.SPAN_ID
-import itau.iti.starter.tracing.util.DiagnosticContextScopeManager.Companion.TRACE_ID
+import br.com.ericocm.simplecrudkotlin.util.DiagnosticContextScopeManager.Companion.CORRELATION_ID
+import br.com.ericocm.simplecrudkotlin.util.DiagnosticContextScopeManager.Companion.SPAN_ID
+import br.com.ericocm.simplecrudkotlin.util.DiagnosticContextScopeManager.Companion.TRACE_ID
 import org.slf4j.MDC
 
 class DiagnosticContextScope private constructor(
-    private val scopeManager: DiagnosticContextScopeManager,
-    private val wrapped: Span,
-    private val toRestore: DiagnosticContextScope?
+        private val scopeManager: DiagnosticContextScopeManager,
+        private val wrapped: Span,
+        private val toRestore: DiagnosticContextScope?
 ) : Scope {
 
     constructor(scopeManager: DiagnosticContextScopeManager, wrapped: Span) : this(

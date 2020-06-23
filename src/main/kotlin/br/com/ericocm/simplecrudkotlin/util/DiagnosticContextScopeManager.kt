@@ -1,9 +1,10 @@
-package itau.iti.starter.tracing.util
+package br.com.ericocm.simplecrudkotlin.util
 
 import io.opentracing.Scope
 import io.opentracing.ScopeManager
 import io.opentracing.Span
 import io.opentracing.noop.NoopScopeManager
+
 
 class DiagnosticContextScopeManager : ScopeManager {
 
