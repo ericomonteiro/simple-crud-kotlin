@@ -1,6 +1,9 @@
 package br.com.ericocm.simplecrudkotlin.model
 
-class Address (
+import javax.persistence.Embeddable
+
+@Embeddable
+class Address(
         val addressLine1: String,
         val addressLine2: String,
         val neighborhood: String,
@@ -9,15 +12,6 @@ class Address (
         val postalCode: String,
         val country: String
 ) {
-    constructor() : this(
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-    )
 
     fun print() {
         println("addressLine1: ${this.addressLine1}")
